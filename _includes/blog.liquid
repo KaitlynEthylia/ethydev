@@ -1,0 +1,27 @@
+---
+layout: common
+tags: blog
+css: blog
+permalink: "/blogs/{{ blog }}/{{ title | slugify }}/index.html"
+---
+		<article>
+			<a class="tag" href=".." style="--color:{{ colour }}">{{ blog }}</a>
+			<time datetime="{{ date }}">{{ date | date: "%Y-%m-%d" }}</time>
+			<h1>{{ title }}</h1>
+			{% if contents %}
+			<hr/>
+			<h2>Table of Contents</h2>
+			{{ content | toc: '{"wrapper":"nav","wrapperClass":null}' }}
+			{% endif %}
+			<hr/>
+			{{ content -}}
+		</article>
+		<hr />
+		<aside>
+			Hey! if you enjoyed reading this and want to tell me, or
+			you didn't and you want to tell me how I can improve, you
+			can email me at
+			<a href="mailto:Kaitlyyn.Ethylia@proton.me">Kaitlyyn.Ethylia@proton.me</a>.
+			Or you can contact me on the fediverse via
+			<a href="https://akko.wtf/kaitlynethylia">@KaitlynEthylia@Akko.wtf</a>.
+		</aside>

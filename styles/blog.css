@@ -1,0 +1,44 @@
+article h1 {
+	font-size: 2em;
+	margin: 0.4em 0.2em;
+}
+
+article {
+	position: relative;
+}
+
+pre,
+p > code {
+	font-size: 0.9em;
+	opacity: 0.8;
+	background: #F9E8F8;
+	padding: 0.1em 0.5em;
+	border-radius: 0.3em;
+}
+pre {
+	padding: 0.5em;
+}
+
+p {
+	text-align: justify;
+}
+
+blockquote {
+	position: relative;
+	width: 100%;
+	left: -2em;
+}
+
+blockquote p {
+	padding: 0.2em 1.5em;
+}
+
+blockquote::before {
+	background: var(--theme);
+	content: '';
+	height: 100%;
+	width: 0.3em;
+	border-top-left-radius: 0.2em;
+	border-bottom-left-radius: 0.2em;
+	position: absolute;
+}

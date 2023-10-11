@@ -1,0 +1,14 @@
+<ul>
+{% assign sorted = list | sort: "data.date" | reverse %}
+{%- for blog in sorted %}
+	<li {% if tagged %}style="--colour:{{ blog.data.colour }}"{% endif %}>
+	<h2><a href="/blogs/{{ blog.data.blog }}/{{ blog.data.title | slugify }}" >{{ blog.data.title }}</a></h2>
+	<time datetime="{{ date }}">{{ blog.data.date | date: "%Y-%m-%d" }}</time>
+	{% if tagged %}
+		<a class="tag" href="{{ blog.data.blog }}" style="--color:{{ blog.data.colour }}">{{ blog.data.blog }}</a>
+	{% endif %}
+	{% assign summary = blog.content | split: "</h2>" %}
+	<summary>{{ summary[1] | slice: 0,300 }}...</summary>
+	</li>
+{% endfor -%}
+</ul>

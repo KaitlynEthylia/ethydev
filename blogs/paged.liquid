@@ -1,0 +1,33 @@
+---
+layout: common
+css: list
+pagination:
+   data: blogs
+   size: 1
+   alias: blog
+permalink: "/blogs/{{ blog }}/index.html"
+blogs:
+ - politics
+ - worldbuilding
+ - computing
+ - infodump
+summaries:
+   politics:
+      "test"
+   worldbuilding:
+      "aciroes"
+   computing:
+      "Here I post about various topics to do with programming or
+       computers in general, usually some variation of me
+       experimenting with something and trying to learn more about it,
+       and writing down my notes, or me just pretending to know more
+       about something than I really do."
+   infodump:
+      "crsat"
+---
+<h1>{{ blog }}</h1>
+<section>
+	{{ summaries[blog] }}
+</section>
+{% assign list = collections.blog | where: 'data.blog', blog %}
+{% include 'list' %}

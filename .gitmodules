@@ -1,9 +1,0 @@
-[submodule "ethydev-kethy"]
-	path = ethydev-kethy
-	url = git@github.com:KaitlynEthylia/ethydev-kethy.git
-[submodule "ethydev-lynx"]
-	path = ethydev-lynx
-	url = git@github.com:KaitlynEthylia/ethydev-lynx.git
-[submodule "ethydev-api"]
-	path = ethydev-api
-	url = git@github.com:KaitlynEthylia/ethydev-api.git
