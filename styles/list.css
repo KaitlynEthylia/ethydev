@@ -1,0 +1,29 @@
+ul {
+	list-style-type: none;
+}
+
+li {
+	position: relative;
+	width: 90%;
+	margin: 3em 0;
+}
+
+li::before {
+	background: var(--theme);
+	content: '';
+	height: 100%;
+	left: -1.5em;
+	width: 0.5em;
+	border-top-left-radius: 0.4em;
+	border-bottom-left-radius: 0.4em;
+	position: absolute;
+}
+
+li h2 {
+	width: 85%;
+}
+
+summary {
+	opacity: 0.5;
+	mask-image: linear-gradient(to bottom, #FFFF 50%, #FFF8);
+}

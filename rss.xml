@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+	<title>Ethydev Blogs</title>
+	<link>https://ethy.dev</link>
+	<description>TODO</description>
+	
+	<item>
+		<title>An Impractical Guide to a Perfect* Home Directory</title>
+		<category>Computing</category>
+		<link>https://ethy.dev/blogs/computing/an-impractical-guide-to-a-perfect-home-directory</link>
+		<description>Introduction
+I won’t start this post with the cliche spiel about how “The home
+directory is one of the most important locations for any linux user”.
+(as I imagine this sort of post on, medium.com, or a video essay might
+start) Or as a rant you’ve hea...</description>
+		<pubDate>Sat Jan 13 2024 00:00:00 GMT+0000 (Coordinated Universal Time)</pubDate>
+	</item>
+</channel>
+</rss>
