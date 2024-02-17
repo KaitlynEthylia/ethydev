@@ -5,14 +5,14 @@ permalink: "/rss.xml"
 <rss version="2.0">
 <channel>
 	<title>Ethydev Blogs</title>
-	<link>https://ethy.dev</link>
+	<link>https://girl.but.gay</link>
 	<description>TODO</description>
 	{% assign sorted = collections.blog | sort: "data.date" | reverse %}
 	{%- for blog in sorted %}
 	<item>
 		<title>{{ blog.data.title }}</title>
 		<category>{{ blog.data.blog | capitalize }}</category>
-		<link>https://ethy.dev/blogs/{{ blog.data.blog }}/{{ blog.data.title | slugify }}</link>
+		<link>https://girl.but.gay/blogs/{{ blog.data.blog }}/{{ blog.data.title | slugify }}</link>
 		<description>{{ blog.content | strip_html | slice: 0,250 }}...</description>
 		<pubDate>{{ blog.data.date }}</pubDate>
 	</item>
