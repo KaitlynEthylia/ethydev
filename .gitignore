@@ -6,3 +6,5 @@ blogs/*/*
 !blogs/*/*.json
 !blogs/*/*.md
 blogs/*/*-WIP.md
+
+TODO.txt
