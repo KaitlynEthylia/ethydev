@@ -165,3 +165,41 @@ The suits values are as follows:
 Spades > Hearts > Clubs > Diamonds
 
 Making Spades the most valuable suit, and Diamonds the least valuable.
+
+## Assertions
+
+These are just statements about the game that should always be true. If, during a game,
+one of these is not true, then you've probably misread the rules at some point.
+
+- **All players** should have exactly 5 cards when a turn ends.
+
+- During an auction **all active players** should have a card on the trade ring.
+
+- There should **always** be at least 2 *active players*. If there is 1, then the game has ended.
+
+- It should **always** be possible to determine a winner, There can never be a tie.
+
+- If you auction a card, you will **not** have that card at the end of your turn.
+
+- If a card is in the discard pile, it will **never** be in any player's hands again.
+
+## Notes
+
+Communication is allowed at all points in the game. Deals made between players are not enforced.
+If you promise to make a trade with someone, there are no consequences for not doing so.
+
+## Additions
+
+Theses are a few extra rules you may add to change up the game a little:
+
+### Secret Offers
+
+In this variation, offers are made face-down and never revealed. The *auctioneer* must trust
+that each player has offered what they've said they've offered. The cards are only ever revealed
+to everybody upon being sent to the *discard pile*.
+
+### High Risk
+
+In this variation, at the beginning of the game, 13 cards from the *deck pile* are sent face-down
+to the *discard pile*, meaning that 13 unknown cards will never appear in the game, making it faster
+and riskier.
