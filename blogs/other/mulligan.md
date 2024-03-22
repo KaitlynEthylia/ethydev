@@ -21,91 +21,93 @@ pretty fun, and I'm very open to feedback to improve it.
 
 At the start of the game, each player is drawn a hand of 5 cards. You
 never reveal your hand to the other players. The remaining cards are
-placed in the middle of the table in the deck pile. Next to the deck
-pile is the discard pile. This will start empty. In a circle around
-the deck and discard piles is the trade ring. The trade ring begins
-empty as well. Each round each player will present a single card on
-the trade ring. Once the hands have been dealt and the remaining cards
-placed in the deck pile, pick somebody to take the first turn.
+placed face-down in the middle of the table in the *deck pile*. Next to the *deck
+pile* is the *discard pile*. This will start empty.
+
+In a circle around the *deck* and *discard piles* is the *trade ring*. The *trade ring* begins
+empty as well. Each player has a single slot on the *trade ring*, where they
+will place their *auctioned card*, or their *offers* for somebody else's card.
+
+Once the hands have been dealt and the remaining cards
+placed in the *deck pile*, pick somebody to take the first turn.
 
 ## The Game Loop
 
-On each turn, whoever's turn it is (the 'active player') gets the
-choice of three action. The player may skip, auction, or fold. Skip is
-fairly self explanatory. If the player chooses to skip, then control
-is immediately transferred to the next player, and it becomes their
-turn.
+On each turn, whoever's turn it is (the '*auctioneer*') gets the
+choice of three actions. They may **Skip**, **Auction**, or **Fold**. *Skip* is
+fairly self-explanatory. If the *auctioneer* chooses to *Skip*, then
+their turn immediately ends, and the *active player* to their left (clockwise)
+becomes the new *auctioneer*.
+
+> To begin with, all players are '*active*'. *Inactive* players are explained later.
 
 ### Auction
 
 Auctions are at the centre of this game, and are how players are able
-to improve their decks. When a player chooses to auction, they select
-a card from their hand, and place it face-up on the trade ring. This
-card is called the auctioned card. At this point the player can no
+to improve their hands. When the *auctioneer* chooses to *auction*, they select
+a card from their hand, and place it face-up on the *trade ring*. This
+card is called the *auctioned card*. At this point the *auctioneer* can no
 longer choose to skip their turn. If they have auctioned a card on the
-trading ring, they will not have that card at the end of the turn.
+*trade ring*, they will not have that card at the end of the turn.
 
-After, each player, except the active player, has to offer one of the
-cards from their hand in exchange for the auctioned card. They place
-their offer face down on the trading ring. After each player has
-placed an offer on the trade ring, all of the offers are switched to
-face-up position.
+After the *auctioned card* is presented, every other *active player* must make an
+*offer* for the *auctioned card*; They place their *offer* face down on the
+*trade ring*. After all *active players* have a card on the *trade ring*,
+all of the *offers* are switched to face-up position.
 
-At this point, the active player has two choices. They can choose to
-swap the auctioned card with one of the offers, or they can choose to
-mulligan.
+At this point, the *auctioneer* has two choices. They can choose to
+**Swap** the *auctioned card* with one of the *offers*, or they can choose to
+**Mulligan**.
 
 ### Swap
 
-If the active player chooses to swap, then all players, except the
-active player and they player they swapped with, retrieves their
-original card from the trading ring, and control moves to the next
-player.
+If the *auctioneer* chooses to *Swap*, Then they take one of the *offers* from the
+*trade ring*, and place it in their hand. The player they swapped with, takes the
+*auctioned card* and adds it to their hand. All other active players retrieve their
+original *offer* from the *trade ring* and return it their hand.
 
 #### Mulligan
 
-If the active player decides none of the offered cards will help them,
-then they may choose to mulligan. In a mulligan, all cards in the
-trading ring are sent to the discard pile, and each of the players are
-drawn a new card. Cards in the discard pile are dead; they will never
-circulate in the game again. After every player is drawn a new card,
-the next player's turn begins.
+If the *auctioneer* decides none of the *offers* will help them,
+then they may choose to *Mulligan*. In a *Mulligan*, all cards in the
+trade ring are sent face-up to the *discard pile*, and each of the players are
+drawn a new card from the *deck pile*. Cards in the *discard pile* are dead; They will never
+circulate in the game again.
 
 ### Fold
 
-A fold is an action a player takes once they are happy with their
-hand; they do not think they can get a better hand, and do not want to
-risk being forced to lose a card they want. When a player folds, they
-no longer participate in trades, and they no longer have a turn. They
-have not lost the game, they have just finalised their hand.
+A *Fold* is an action the *auctioneer* takes once they are happy with their
+hand; They do not think they can get a better hand, and do not want to
+risk being forced to lose a card. When the auctioneer folds, as though they
+had chosen to skip their turn, their turn ends immediately. After *folding*,
+a player becomes *innactive*. This means that they no longer participate in
+auctions, they no longer have a turn, and their hand becomes frozen for the
+rest of the game.
 
 ## End States
 
-There are two ways for the game to end. If all (but 1) players fold,
-then the game ends and each player's hands are evaluated to determine
-a winner. Alternatively, if there are no longer sufficient cards in
-the deck pile to draw a new card for each player, then the game must
-also end.
+There are two ways for the game to end. If there are only two *active
+players*, and one of them chooses to fold, then the game ends.
+Alternatively, if there are no longer sufficient cards in
+the deck pile to draw a new card for each *active player* (immediately
+following a *Mulligan*), then the game must also end.
 
 ### 2 Players Remain
 
-When there are only two players remaining that have not folded, the
-game still functions as normal. The trade ring will just have a single
-offer. Once either of these players fold, the game ends, and the other
+When there are only two *active players* remaining, the
+game still functions as normal. The *trade ring* will just have a single
+*offer*. Once either of these players fold, the game ends, and the other
 player is also forced to fold.
 
 ### The Deck Nears Empty
 
 Immediately after dealing cards following a mulligan, if there are no
-longer enough cards to deal for every player, then the game ends. Any
-leftover cards are revealed and then sent to the discard pile. If you
-are playing with 2 or 4 players, then there will be no leftover cards,
-and the game ends as soon as the deck is empty.
+longer enough cards in the *deck pile* to deal for every player, then the game ends. Any
+left-over cards are revealed and then sent to the *discard pile*.
 
 ## Win Condition
 
-Once the game has ended, all players that have not folded have their
-hands frozen, and each player reveals their hand. The winner is the
+Once the game has ended, all players reveal their hands. The winner is the
 player with the most valuable hand, just like in poker and many other
 card games. Similarly, most of the hand evaluations are very similar
 to poker.
@@ -113,20 +115,26 @@ to poker.
 ### Hand Evaluation
 
 The possible types of hands are as follows, in order of least valuable
-to most valuable:
+to most valuable, with an example in brackets:
 
  - High Card: A single card. Your hand does not fit any of the other
-   valid hands
- - Pair: Two cards of the same value.
- - Two Pair: Two pairs.
- - Low Straight: Four consecutive cards.
- - Three of a Kind: Three cards of the same value
- - Four of a Kind: Four cards of the same value
- - Full House: Two of the same card + Three of the same card
- - High Straight: Five consecutive cards.
- - Flush: Five cards of the same suit.
+   valid hands (♠A)
+ - Pair: Two cards of the same value. (♥6 ♦6)
+ - Two Pair: Two pairs. (♦J ♠J ♠4 ♣4)
+ - Low Straight: Four consecutive cards. (♥J ♥Q ♠K ♦A)
+ - Three-of-a-Kind: Three cards of the same value (♦9 ♥9 ♣9)
+ - High Straight: Five consecutive cards. (♦10 ♥J ♥Q ♠K ♦A)
+ - Flush: Five cards of the same suit. (♠5 ♠A ♠J ♠7 ♠2)
+ - Full House: Two of the same card + Three of the same card (♠3 ♦3 ♦3 ♦6 ♠6)
+ - Four of a Kind: Four cards of the same value (♦4 ♣4 ♥4 ♠4)
  - Straight Flush: Five consecutive cards, all of the
-   same suit.
+   same suit. (♠10 ♠J ♠Q ♠K ♠A)
+
+The of cards that determine the value of your hand are called your '*value hand*'.
+If you have a three-of-a-kind, then the three cards making it up, are your
+*value hand*, and the rest of the cards in your hand are ignored.
+
+Full House, 
 
 #### High Ace and Low Ace
 
@@ -139,16 +147,13 @@ both), you cannot have a straight that goes from king, to ace, to two.
 
 #### Card Value
 
-If two players have the same type of hand, whichever hand has the
-single highest valued card wins. Note that this only refers to to the
-hand that makes up the type. If you have a three of a kind, as well as
-an ace, then you cannot use that ace to win against another three of a
-kind.
+If two players have the same type of hand, whoever's *value hand* has the
+single highest valued card wins.
 
 #### Suit Value
 
-On the very rare occasion that two hands are of the same type and have
-the same highest card, i.e. A low straight where each player has a
+On the very rare occasion that two value hands are of the same type and have
+the same highest card, i.e. A low straight where both players have a
 straight from three to six, then the suit of each highest card is
 compared. This is rarely important but it does mean that some suits
 are very slightly more valuable with others. In the example, whichever
@@ -157,4 +162,6 @@ valuable suit wins
 
 The suits values are as follows:
 
-Spades > Hearts > Diamonds > Clubs
+Spades > Hearts > Clubs > Diamonds
+
+Making Spades the most valuable suit, and Diamonds the least valuable.
