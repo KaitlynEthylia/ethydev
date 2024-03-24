@@ -1,6 +1,6 @@
 ---
 title: How to Play Mulligan
-date: 2024-03-19
+date: 2024-03-24
 ---
 
 ## Introduction
