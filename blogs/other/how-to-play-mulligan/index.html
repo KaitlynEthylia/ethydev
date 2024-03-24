@@ -38,55 +38,60 @@ pretty fun, and I’m very open to feedback to improve it.</p>
 <h2 id="setup" tabindex="-1">Setup</h2>
 <p>At the start of the game, each player is drawn a hand of 5 cards. You
 never reveal your hand to the other players. The remaining cards are
-placed face-down in the middle of the table in the <em>deck pile</em>. Next to the <em>deck
-pile</em> is the <em>discard pile</em>. This will start empty.</p>
-<p>In a circle around the <em>deck</em> and <em>discard piles</em> is the <em>trade ring</em>. The <em>trade ring</em> begins
-empty as well. Each player has a single slot on the <em>trade ring</em>, where they
-will place their <em>auctioned card</em>, or their <em>offers</em> for somebody else’s card.</p>
-<p>Once the hands have been dealt and the remaining cards
-placed in the <em>deck pile</em>, pick somebody to take the first turn.</p>
+placed face-down in the middle of the table in the <em>deck pile</em>. Next
+to the <em>deck pile</em> is the <em>discard pile</em>. This will start empty.</p>
+<p>In a circle around the <em>deck</em> and <em>discard piles</em> is the <em>trade ring</em>.
+The <em>trade ring</em> begins empty as well. Each player has a single slot
+on the <em>trade ring</em>, where they will place their <em>auctioned card</em>, or
+their <em>offers</em> for somebody else’s card.</p>
+<p>Once the hands have been dealt and the remaining cards placed in the
+<em>deck pile</em>, pick somebody to take the first turn.</p>
 <h2 id="the-game-loop" tabindex="-1">The Game Loop</h2>
 <p>On each turn, whoever’s turn it is (the ‘<em>auctioneer</em>’) gets the
-choice of three actions. They may <strong>Skip</strong>, <strong>Auction</strong>, or <strong>Fold</strong>. <em>Skip</em> is
-fairly self-explanatory. If the <em>auctioneer</em> chooses to <em>Skip</em>, then
-their turn immediately ends, and the <em>active player</em> to their left (clockwise)
-becomes the new <em>auctioneer</em>.</p>
+choice of three actions. They may <strong>Skip</strong>, <strong>Auction</strong>, or <strong>Fold</strong>.
+<em>Skip</em> is fairly self-explanatory. If the <em>auctioneer</em> chooses to
+<em>Skip</em>, then their turn immediately ends, and the <em>active player</em> to
+their left (clockwise) becomes the new <em>auctioneer</em>.</p>
 <blockquote>
-<p>To begin with, all players are ‘<em>active</em>’. <em>Inactive</em> players are explained later.</p>
+<p>To begin with, all players are ‘<em>active</em>’. <em>Inactive</em> players are
+explained later.</p>
 </blockquote>
 <h3 id="auction" tabindex="-1">Auction</h3>
 <p>Auctions are at the centre of this game, and are how players are able
-to improve their hands. When the <em>auctioneer</em> chooses to <em>auction</em>, they select
-a card from their hand, and place it face-up on the <em>trade ring</em>. This
-card is called the <em>auctioned card</em>. At this point the <em>auctioneer</em> can no
-longer choose to skip their turn. If they have auctioned a card on the
-<em>trade ring</em>, they will not have that card at the end of the turn.</p>
-<p>After the <em>auctioned card</em> is presented, every other <em>active player</em> must make an
-<em>offer</em> for the <em>auctioned card</em>; They place their <em>offer</em> face down on the
-<em>trade ring</em>. After all <em>active players</em> have a card on the <em>trade ring</em>,
-all of the <em>offers</em> are switched to face-up position.</p>
+to improve their hands. When the <em>auctioneer</em> chooses to <em>auction</em>,
+they select a card from their hand, and place it face-up on the <em>trade
+ring</em>. This card is called the <em>auctioned card</em>. At this point the
+<em>auctioneer</em> can no longer choose to skip their turn. If they have
+auctioned a card on the <em>trade ring</em>, they will not have that card at
+the end of the turn.</p>
+<p>After the <em>auctioned card</em> is presented, every other <em>active player</em>
+must make an <em>offer</em> for the <em>auctioned card</em>; They place their
+<em>offer</em> face down on the <em>trade ring</em>. After all <em>active players</em> have
+a card on the <em>trade ring</em>, all of the <em>offers</em> are switched to
+face-up position.</p>
 <p>At this point, the <em>auctioneer</em> has two choices. They can choose to
-<strong>Swap</strong> the <em>auctioned card</em> with one of the <em>offers</em>, or they can choose to
-<strong>Mulligan</strong>.</p>
+<strong>Swap</strong> the <em>auctioned card</em> with one of the <em>offers</em>, or they can
+choose to <strong>Mulligan</strong>.</p>
 <h3 id="swap" tabindex="-1">Swap</h3>
-<p>If the <em>auctioneer</em> chooses to <em>Swap</em>, Then they take one of the <em>offers</em> from the
-<em>trade ring</em>, and place it in their hand. The player they swapped with, takes the
-<em>auctioned card</em> and adds it to their hand. All other active players retrieve their
-original <em>offer</em> from the <em>trade ring</em> and return it their hand.</p>
+<p>If the <em>auctioneer</em> chooses to <em>Swap</em>, Then they take one of the
+<em>offers</em> from the <em>trade ring</em>, and place it in their hand. The player
+they swapped with, takes the <em>auctioned card</em> and adds it to their
+hand. All other active players retrieve their original <em>offer</em> from
+the <em>trade ring</em> and return it their hand.</p>
 <h4 id="mulligan" tabindex="-1">Mulligan</h4>
 <p>If the <em>auctioneer</em> decides none of the <em>offers</em> will help them,
 then they may choose to <em>Mulligan</em>. In a <em>Mulligan</em>, all cards in the
-trade ring are sent face-up to the <em>discard pile</em>, and each of the players are
-drawn a new card from the <em>deck pile</em>. Cards in the <em>discard pile</em> are dead; They will never
-circulate in the game again.</p>
+trade ring are sent face-up to the <em>discard pile</em>, and each of the
+players are drawn a new card from the <em>deck pile</em>. Cards in the
+<em>discard pile</em> are dead; They will never circulate in the game again.</p>
 <h3 id="fold" tabindex="-1">Fold</h3>
-<p>A <em>Fold</em> is an action the <em>auctioneer</em> takes once they are happy with their
-hand; They do not think they can get a better hand, and do not want to
-risk being forced to lose a card. When the auctioneer folds, as though they
-had chosen to skip their turn, their turn ends immediately. After <em>folding</em>,
-a player becomes <em>innactive</em>. This means that they no longer participate in
-auctions, they no longer have a turn, and their hand becomes frozen for the
-rest of the game.</p>
+<p>A <em>Fold</em> is an action the <em>auctioneer</em> takes once they are happy with
+their hand; They do not think they can get a better hand, and do not
+want to risk being forced to lose a card. When the auctioneer folds,
+as though they had chosen to skip their turn, their turn ends
+immediately. After <em>folding</em>, a player becomes <em>innactive</em>. This means
+that they no longer participate in auctions, they no longer have a
+turn, and their hand becomes frozen for the rest of the game.</p>
 <h2 id="end-states" tabindex="-1">End States</h2>
 <p>There are two ways for the game to end. If there are only two <em>active
 players</em>, and one of them chooses to fold, then the game ends.
@@ -94,19 +99,20 @@ Alternatively, if there are no longer sufficient cards in
 the deck pile to draw a new card for each <em>active player</em> (immediately
 following a <em>Mulligan</em>), then the game must also end.</p>
 <h3 id="2-players-remain" tabindex="-1">2 Players Remain</h3>
-<p>When there are only two <em>active players</em> remaining, the
-game still functions as normal. The <em>trade ring</em> will just have a single
-<em>offer</em>. Once either of these players fold, the game ends, and the other
-player is also forced to fold.</p>
+<p>When there are only two <em>active players</em> remaining, the game still
+functions as normal. The <em>trade ring</em> will just have a single <em>offer</em>.
+Once either of these players fold, the game ends, and the other player
+is also forced to fold.</p>
 <h3 id="the-deck-nears-empty" tabindex="-1">The Deck Nears Empty</h3>
 <p>Immediately after dealing cards following a mulligan, if there are no
-longer enough cards in the <em>deck pile</em> to deal for every player, then the game ends. Any
-left-over cards are revealed and then sent to the <em>discard pile</em>.</p>
+longer enough cards in the <em>deck pile</em> to deal for every player, then
+the game ends. Any left-over cards are revealed and then sent to the
+<em>discard pile</em>.</p>
 <h2 id="win-condition" tabindex="-1">Win Condition</h2>
-<p>Once the game has ended, all players reveal their hands. The winner is the
-player with the most valuable hand, just like in poker and many other
-card games. Similarly, most of the hand evaluations are very similar
-to poker.</p>
+<p>Once the game has ended, all players reveal their hands. The winner is
+the player with the most valuable hand, just like in poker and many
+other card games. Similarly, most of the hand evaluations are very
+similar to poker.</p>
 <h3 id="hand-evaluation" tabindex="-1">Hand Evaluation</h3>
 <p>The possible types of hands are as follows, in order of least valuable
 to most valuable, with an example in brackets:</p>
@@ -119,15 +125,16 @@ valid hands (♠A)</li>
 <li>Three-of-a-Kind: Three cards of the same value (♦9 ♥9 ♣9)</li>
 <li>High Straight: Five consecutive cards. (♦10 ♥J ♥Q ♠K ♦A)</li>
 <li>Flush: Five cards of the same suit. (♠5 ♠A ♠J ♠7 ♠2)</li>
-<li>Full House: Two of the same card + Three of the same card (♠3 ♦3 ♦3 ♦6 ♠6)</li>
+<li>Full House: Two of the same card + Three of the same card
+(♠3 ♦3 ♦3 ♦6 ♠6)</li>
 <li>Four of a Kind: Four cards of the same value (♦4 ♣4 ♥4 ♠4)</li>
 <li>Straight Flush: Five consecutive cards, all of the
 same suit. (♠10 ♠J ♠Q ♠K ♠A)</li>
 </ul>
-<p>The of cards that determine the value of your hand are called your ‘<em>value hand</em>’.
-If you have a three-of-a-kind, then the three cards making it up, are your
-<em>value hand</em>, and the rest of the cards in your hand are ignored.</p>
-<p>Full House,</p>
+<p>The of cards that determine the value of your hand are called your
+‘<em>value hand</em>’. If you have a three-of-a-kind, then the three cards
+making it up, are your <em>value hand</em>, and the rest of the cards in your
+hand are ignored.</p>
 <h4 id="high-ace-and-low-ace" tabindex="-1">High Ace and Low Ace</h4>
 <p>As usual, an Ace can count as both as the lowest card, and as the
 highest card. However it can only serve one of these rolls at once. By
@@ -136,13 +143,13 @@ cards. It only serves as a low ace in straights, where it may be
 adjacent to a two. However, as it can only be low or high (and never
 both), you cannot have a straight that goes from king, to ace, to two.</p>
 <h4 id="card-value" tabindex="-1">Card Value</h4>
-<p>If two players have the same type of hand, whoever’s <em>value hand</em> has the
-single highest valued card wins.</p>
+<p>If two players have the same type of hand, whoever’s <em>value hand</em> has
+the single highest valued card wins.</p>
 <h4 id="suit-value" tabindex="-1">Suit Value</h4>
-<p>On the very rare occasion that two value hands are of the same type and have
-the same highest card, i.e. A low straight where both players have a
-straight from three to six, then the suit of each highest card is
-compared. This is rarely important but it does mean that some suits
+<p>On the very rare occasion that two value hands are of the same type
+and have the same highest card, i.e. A low straight where both players
+have a straight from three to six, then the suit of each highest card
+is compared. This is rarely important but it does mean that some suits
 are very slightly more valuable with others. In the example, whichever
 of these two players has the six in the straight with the most
 valuable suit wins</p>
@@ -150,41 +157,81 @@ valuable suit wins</p>
 <p>Spades &gt; Hearts &gt; Clubs &gt; Diamonds</p>
 <p>Making Spades the most valuable suit, and Diamonds the least valuable.</p>
 <h2 id="assertions" tabindex="-1">Assertions</h2>
-<p>These are just statements about the game that should always be true. If, during a game,
-one of these is not true, then you’ve probably misread the rules at some point.</p>
+<p>These are just statements about the game that should always be true.
+If, during a game, one of these is not true, then you’ve probably
+misread the rules at some point.</p>
 <ul>
 <li>
 <p><strong>All players</strong> should have exactly 5 cards when a turn ends.</p>
 </li>
 <li>
-<p>During an auction <strong>all active players</strong> should have a card on the trade ring.</p>
+<p>During an auction <strong>all active players</strong> should have a card on the
+trade ring.</p>
 </li>
 <li>
-<p>There should <strong>always</strong> be at least 2 <em>active players</em>. If there is 1, then the game has ended.</p>
+<p>There should <strong>always</strong> be at least 2 <em>active players</em>. If there is
+1, then the game has ended.</p>
 </li>
 <li>
-<p>It should <strong>always</strong> be possible to determine a winner, There can never be a tie.</p>
+<p>It should <strong>always</strong> be possible to determine a winner, There can
+never be a tie.</p>
 </li>
 <li>
-<p>If you auction a card, you will <strong>not</strong> have that card at the end of your turn.</p>
+<p>If you auction a card, you will <strong>not</strong> have that card at the end of
+your turn.</p>
 </li>
 <li>
-<p>If a card is in the discard pile, it will <strong>never</strong> be in any player’s hands again.</p>
+<p>If a card is in the discard pile, it will <strong>never</strong> be in any
+player’s hands again.</p>
 </li>
 </ul>
 <h2 id="notes" tabindex="-1">Notes</h2>
-<p>Communication is allowed at all points in the game. Deals made between players are not enforced.
-If you promise to make a trade with someone, there are no consequences for not doing so.</p>
+<p>Communication is allowed at all points in the game. Deals made between
+players are not enforced. If you promise to make a trade with someone,
+there are no consequences for not doing so.</p>
 <h2 id="additions" tabindex="-1">Additions</h2>
-<p>Theses are a few extra rules you may add to change up the game a little:</p>
+<p>Theses are a few extra rules you may add to change up the game a
+little:</p>
 <h3 id="secret-offers" tabindex="-1">Secret Offers</h3>
-<p>In this variation, offers are made face-down and never revealed. The <em>auctioneer</em> must trust
-that each player has offered what they’ve said they’ve offered. The cards are only ever revealed
-to everybody upon being sent to the <em>discard pile</em>.</p>
+<p>In this variation, offers are made face-down and never revealed. The
+<em>auctioneer</em> must trust that each player has offered what they’ve said
+they’ve offered. The cards are only ever revealed to everybody upon
+being sent to the <em>discard pile</em>.</p>
 <h3 id="high-risk" tabindex="-1">High Risk</h3>
-<p>In this variation, at the beginning of the game, 13 cards from the <em>deck pile</em> are sent face-down
-to the <em>discard pile</em>, meaning that 13 unknown cards will never appear in the game, making it faster
-and riskier.</p>
+<p>In this variation, at the beginning of the game, 13 cards from the
+<em>deck pile</em> are sent face-down to the <em>discard pile</em>, meaning that 13
+unknown cards will never appear in the game, making it faster and
+riskier.</p>
+<h3 id="open-hands" tabindex="-1">Open Hands</h3>
+<p>In this variation, your hand is visible to all players. This mode
+doesn’t work with ‘secret offers’ but allows players to make more
+informed deals and bribes, and increases the tension when you can see
+what potential value hands an opponent could make, allowing you to
+make strateigic offers and auctions. This tends to cause games to last
+longer.</p>
+<blockquote>
+<p>I don’t know if it actually causes games to be longer, but in
+play-testing, the games with this mode were noticably longer.</p>
+</blockquote>
+<h2 id="playing-for-chips" tabindex="-1">Playing For Chips</h2>
+<p>I don’t like gambling, but playing card games with fake chips can be a
+lot of fun, so I’ve tried to come up with a system that allows you to
+play for chips in <em>Mulligan</em>. This system actually involves much less
+gambling than a game like poker, as you’re not using the chips to
+place bets, but instead using them to aid negotiations.</p>
+<p>When playing for chips, I’d highly recommend playing with High Risk
+mode, and Open Hands mode. It makes the game feel much more intense
+and high-stakes.</p>
+<p>When auctioning a card, you must place some amount of chips on top of
+the <em>auctioned card</em>. Players making offers for the <em>auctioned card</em>
+may choose to place chips with their offers, but they do not have to.
+If the <em>auctioneer</em> chooses to <em>Swap</em>, then the chips on top of the
+cards are swapped, just as the cards are. If the <em>auctioneer</em> chooses
+to <em>Mulligan</em>, Then the chips on top of every card in the trade ring
+are placed in a pot. The contents of the pot is awarded to the winner
+of the game.</p>
+<p>If you have no chips. Once you become the <em>auctioneer</em>, you are forced
+to <em>Fold</em>.</p>
 </article>
 		<hr />
 		<aside>
